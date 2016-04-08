@@ -34,29 +34,19 @@
 #pragma -mark ExpressionKeyboardDelegate
 //删除按钮
 - (void)ExpressionDelete{
-    if([contentStr length] > 0){
-        NSRange range = NSMakeRange([contentStr length]-1, 1);
-        [contentStr deleteCharactersInRange:range];
-        _contentField.text = contentStr;
-    }
+    [self deleteExpression:contentStr];
+    _contentField.text = contentStr;
+    _contentTextView.attributedText= [self zhuanhuan:contentStr];
 }
 
 //输入的表情
 - (void)ExpressionSelect:(NSString *)str{
     [contentStr appendString:str];
     _contentField.text = contentStr;
+    _contentTextView.attributedText= [self zhuanhuan:contentStr];
 }
 
-- (IBAction)SendMessage:(id)sender {
-    _contentLabel.attributedText= [self zhuanhuan:contentStr];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (NSMutableAttributedString *)zhuanhuan:(NSString *)content{
+- (NSMutableAttributedString *)zhuanhuan:(NSMutableString *)content{
     
     //创建可变的属性字符串
     NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:content];
@@ -122,5 +112,50 @@
     }
     return attributeString;
 }
+
+- (void)deleteExpression:(NSMutableString *)content{
+    if([content length] <= 0){
+        return;
+    }
+    //字符串末尾
+    NSInteger length = [content length] - 1;
+    
+    //字符串末尾位置
+    NSRange range = NSMakeRange(length, 1);
+    
+    //获取末尾位置字符串
+    NSString *lastStr = [content substringWithRange:range];
+    
+    if ([lastStr isEqualToString:@"]"]) {
+        //新浪,小浪花表情
+        
+        //获取[的位置
+        NSRange biaoqingRang = [content rangeOfString:@"[" options:NSBackwardsSearch];
+        
+        //获取[]长度
+        NSInteger biaoqingLength = range.location - biaoqingRang.location;
+        
+        //重置删除的range
+        range = NSMakeRange(length - biaoqingLength, biaoqingLength + 1);
+        
+    }else if ([lastStr intValue] < 0x1F600 || [lastStr intValue] > 0x1F64F) {
+        //系统表情
+        
+        //重置删除的range
+        range = NSMakeRange(length - 1, 2);
+    }
+    [content deleteCharactersInRange:range];
+}
+
+
+
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 
 @end

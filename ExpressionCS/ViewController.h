@@ -10,11 +10,7 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
-
 @property (weak, nonatomic) IBOutlet UITextField *contentField;
-
-@property (weak, nonatomic) IBOutlet UIButton *SendMessage;
-- (IBAction)SendMessage:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextView *contentTextView;
 
 @end

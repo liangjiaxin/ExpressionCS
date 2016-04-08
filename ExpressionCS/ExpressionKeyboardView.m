@@ -294,7 +294,7 @@
     }
 }
 
-//选择表情
+//选择表情(返回文字)
 - (void)tapLxhView:(UIButton *)btn{
     NSInteger num = btn.tag / 10000;
     NSInteger numTag = btn.tag % 10000;

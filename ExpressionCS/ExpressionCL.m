@@ -67,7 +67,7 @@
 }
 
 /**
- *根据文字获取sina默认表情图片
+ *根据图片名获取sina默认表情图片
  */
 + (UIImage *)ObtainPictureDefault:(NSString *)name{
     
@@ -80,7 +80,7 @@
 }
 
 /**
- *根据文字获取浪小花表情图片
+ *根据图片名获取浪小花表情图片
  */
 + (UIImage *)ObtainPictureLxh:(NSString *)name{
     NSString *filePath = [NSString stringWithFormat:@"%@/%@",[self ObtainExpressionPath:@"com.sina.lxh"],name];
