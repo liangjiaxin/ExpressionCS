@@ -16,6 +16,7 @@
 
 - (instancetype)init
 {
+    NSInteger meiye = 19;
     float wid = 35;
     float jianju = (WIDE - 35 * 7) / 8;
     float gao = wid*3+jianju*3+30+40;
@@ -24,13 +25,13 @@
         self.backgroundColor = [UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:1];
         
         _emojiArry = [ExpressionCL ObtainAllEmojiExpression];
-        _emojinum = _emojiArry.count % 20 > 0 ? _emojiArry.count / 20 + 1 : _emojiArry.count / 20;
+        _emojinum = _emojiArry.count % meiye > 0 ? _emojiArry.count / meiye + 1 : _emojiArry.count / meiye;
         
         _defaultArry = [ExpressionCL ObtainAllSinaDefaultExpression];
-        _defaultnum = _defaultArry.count % 20 > 0 ? _defaultArry.count / 20 + 1 : _defaultArry.count / 20;
+        _defaultnum = _defaultArry.count % meiye > 0 ? _defaultArry.count / meiye + 1 : _defaultArry.count / meiye;
         
         _lxhArry = [ExpressionCL ObtainAllSinaLxhExpression];
-        _lxhnum = _lxhArry.count % 20 > 0 ? _lxhArry.count / 20 + 1 : _lxhArry.count / 20;
+        _lxhnum = _lxhArry.count % meiye > 0 ? _lxhArry.count / meiye + 1 : _lxhArry.count / meiye;
         
         [self addEmojiView:_emojiArry andNum:_emojinum andBegin:0];
         [self addDefaultView:_defaultArry andNum:_defaultnum andBegin:_emojinum];
@@ -95,6 +96,15 @@
                 
                 if(y == 2 && u == 6){
                     
+                    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(beginNum*WIDE+jianju+(jianju+wid)*u+i*WIDE, (jianju+hig)*y+15+3, wid, hig-14)];
+                    [btn setBackgroundImage:[UIImage imageNamed:@"buttonBKImage"] forState:UIControlStateNormal];
+                    [btn setTitle:@"发送" forState:UIControlStateNormal];
+                    btn.titleLabel.font = [UIFont systemFontOfSize:12];
+                    [btn addTarget:self action:@selector(sendLxh:) forControlEvents:UIControlEventTouchUpInside];
+                    [self.defaultView addSubview:btn];
+                    
+                }else if(y == 2 && u == 5){
+                    
                     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(beginNum*WIDE+jianju+(jianju+wid)*u+i*WIDE, (jianju+hig)*y+15, wid, hig-10)];
                     [btn setBackgroundImage:[ExpressionCL ObtainBtnImage] forState:UIControlStateNormal];
                     [btn addTarget:self action:@selector(deleteLxh:) forControlEvents:UIControlEventTouchUpInside];
@@ -134,6 +144,15 @@
             for (int u=0; u<7; u++) {
                 
                 if(y == 2 && u == 6){
+                    
+                    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(beginNum*WIDE+jianju+(jianju+wid)*u+i*WIDE, (jianju+hig)*y+15, wid, hig-10)];
+                    [btn setBackgroundImage:[UIImage imageNamed:@"buttonBKImage"] forState:UIControlStateNormal];
+                    [btn setTitle:@"发送" forState:UIControlStateNormal];
+                    btn.titleLabel.font = [UIFont systemFontOfSize:12];
+                    [btn addTarget:self action:@selector(sendLxh:) forControlEvents:UIControlEventTouchUpInside];
+                    [self.defaultView addSubview:btn];
+                    
+                }else if(y == 2 && u == 5){
                     
                     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(beginNum*WIDE+jianju+(jianju+wid)*u+i*WIDE, (jianju+hig)*y+15, wid, hig-10)];
                     [btn setBackgroundImage:[ExpressionCL ObtainBtnImage] forState:UIControlStateNormal];
@@ -179,6 +198,15 @@
                 if(y == 2 && u == 6){
                     
                     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(beginNum*WIDE+jianju+(jianju+wid)*u+i*WIDE, (jianju+hig)*y+15, wid, hig-10)];
+                    [btn setBackgroundImage:[UIImage imageNamed:@"buttonBKImage"] forState:UIControlStateNormal];
+                    [btn setTitle:@"发送" forState:UIControlStateNormal];
+                    btn.titleLabel.font = [UIFont systemFontOfSize:12];
+                    [btn addTarget:self action:@selector(sendLxh:) forControlEvents:UIControlEventTouchUpInside];
+                    [self.defaultView addSubview:btn];
+                    
+                }else if(y == 2 && u == 5){
+                    
+                    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(beginNum*WIDE+jianju+(jianju+wid)*u+i*WIDE, (jianju+hig)*y+15, wid, hig-10)];
                     [btn setBackgroundImage:[ExpressionCL ObtainBtnImage] forState:UIControlStateNormal];
                     [btn addTarget:self action:@selector(deleteLxh:) forControlEvents:UIControlEventTouchUpInside];
                     [self.defaultView addSubview:btn];
@@ -212,22 +240,32 @@
     if(page == _emojinum-1){
         
         self.defaultPage.numberOfPages = _emojinum;//总的图片页数
+        _selectIndex = 0;
+        [self setUpBtnSelect];
         
     }else if(page == _emojinum){
         
         self.defaultPage.numberOfPages = _defaultnum;//总的图片页数
+        _selectIndex = 1;
+        [self setUpBtnSelect];
         
     }else if(page == _emojinum+_defaultnum-1){
         
         self.defaultPage.numberOfPages = _defaultnum;//总的图片页数
+        _selectIndex = 1;
+        [self setUpBtnSelect];
         
     }else if(page == _emojinum+_defaultnum){
         
         self.defaultPage.numberOfPages = _lxhnum;//总的图片页数
+        _selectIndex = 2;
+        [self setUpBtnSelect];
         
     }else if(page == _emojinum+_defaultnum+_lxhnum-1){
         
         self.defaultPage.numberOfPages = _lxhnum;//总的图片页数
+        _selectIndex = 2;
+        [self setUpBtnSelect];
         
     }
     
@@ -294,29 +332,34 @@
     }
 }
 
-//选择表情(返回文字)
+//选择表情
 - (void)tapLxhView:(UIButton *)btn{
     NSInteger num = btn.tag / 10000;
     NSInteger numTag = btn.tag % 10000;
     
     switch (num) {
         case 1:
-            [self.delegate ExpressionSelect:_emojiArry[numTag]];
+            [self.delegate expressionSelect:_emojiArry[numTag]];
             break;
         case 2:
-            [self.delegate ExpressionSelect:_defaultArry[numTag][@"chs"]];
+            [self.delegate expressionSelect:_defaultArry[numTag][@"chs"]];
             break;
         case 3:
-            [self.delegate ExpressionSelect:_lxhArry[numTag][@"chs"]];
+            [self.delegate expressionSelect:_lxhArry[numTag][@"chs"]];
             break;
         default:
             break;
     }
 }
 
+//发送
+- (void)sendLxh:(UIButton *)btn {
+    [self.delegate expressionSend];
+}
+
 //删除表情
 - (void)deleteLxh:(UIButton *)btn{
-    [self.delegate ExpressionDelete];
+    [self.delegate expressionDelete];
 }
 
 - (UIScrollView *)defaultView{

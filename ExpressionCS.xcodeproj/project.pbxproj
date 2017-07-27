@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		706281051C4CE2570086D2CF /* M80AttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 706280FD1C4CE2570086D2CF /* M80AttributedLabel.m */; };
-		706281061C4CE2570086D2CF /* M80AttributedLabelAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 706280FF1C4CE2570086D2CF /* M80AttributedLabelAttachment.m */; };
-		706281071C4CE2570086D2CF /* M80AttributedLabelURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 706281021C4CE2570086D2CF /* M80AttributedLabelURL.m */; };
-		706281081C4CE2570086D2CF /* NSMutableAttributedString+M80.m in Sources */ = {isa = PBXBuildFile; fileRef = 706281041C4CE2570086D2CF /* NSMutableAttributedString+M80.m */; };
+		6CCAE77C1F29DADD004C9F43 /* buttonBKImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CCAE76D1F29DADD004C9F43 /* buttonBKImage@2x.png */; };
+		6CCAE77D1F29DADD004C9F43 /* Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCAE76F1F29DADD004C9F43 /* Emoji.m */; };
+		6CCAE77E1F29DADD004C9F43 /* EmojiEmoticons.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCAE7711F29DADD004C9F43 /* EmojiEmoticons.m */; };
+		6CCAE77F1F29DADD004C9F43 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6CCAE7721F29DADD004C9F43 /* Emoticons.bundle */; };
+		6CCAE7801F29DADD004C9F43 /* ExpressionCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCAE7741F29DADD004C9F43 /* ExpressionCL.m */; };
+		6CCAE7811F29DADD004C9F43 /* ExpressionKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCAE7761F29DADD004C9F43 /* ExpressionKeyboardView.m */; };
+		6CCAE7821F29DADD004C9F43 /* KZLinkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCAE7791F29DADD004C9F43 /* KZLinkLabel.m */; };
+		6CCAE7831F29DADD004C9F43 /* NSAttributedString+Emotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCAE77B1F29DADD004C9F43 /* NSAttributedString+Emotion.m */; };
 		70E4C48C1C47811C00E4F6B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E4C48B1C47811C00E4F6B4 /* main.m */; };
 		70E4C48F1C47811C00E4F6B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E4C48E1C47811C00E4F6B4 /* AppDelegate.m */; };
 		70E4C4981C47811C00E4F6B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E4C4961C47811C00E4F6B4 /* Main.storyboard */; };
@@ -18,13 +22,8 @@
 		70E4C49D1C47811C00E4F6B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E4C49B1C47811C00E4F6B4 /* LaunchScreen.storyboard */; };
 		70E4C4A81C47811D00E4F6B4 /* ExpressionCSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E4C4A71C47811D00E4F6B4 /* ExpressionCSTests.m */; };
 		70E4C4B31C47811D00E4F6B4 /* ExpressionCSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E4C4B21C47811D00E4F6B4 /* ExpressionCSUITests.m */; };
-		70E4C4C21C4781A100E4F6B4 /* ExpressionCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E4C4C11C4781A100E4F6B4 /* ExpressionCL.m */; };
-		70E4C4C51C4781EA00E4F6B4 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 70E4C4C41C4781EA00E4F6B4 /* Emoticons.bundle */; };
 		70E4C4C91C47884300E4F6B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E4C4C71C47884300E4F6B4 /* ViewController.m */; };
 		70E4C4CA1C47884300E4F6B4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E4C4C81C47884300E4F6B4 /* ViewController.xib */; };
-		70E4C4CD1C478B0A00E4F6B4 /* Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E4C4CC1C478B0A00E4F6B4 /* Emoji.m */; };
-		70E4C4D01C4792F100E4F6B4 /* EmojiEmoticons.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E4C4CF1C4792F000E4F6B4 /* EmojiEmoticons.m */; };
-		70E4C4D31C47996800E4F6B4 /* ExpressionKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E4C4D21C47996800E4F6B4 /* ExpressionKeyboardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,15 +44,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		706280FC1C4CE2570086D2CF /* M80AttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M80AttributedLabel.h; sourceTree = "<group>"; };
-		706280FD1C4CE2570086D2CF /* M80AttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M80AttributedLabel.m; sourceTree = "<group>"; };
-		706280FE1C4CE2570086D2CF /* M80AttributedLabelAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M80AttributedLabelAttachment.h; sourceTree = "<group>"; };
-		706280FF1C4CE2570086D2CF /* M80AttributedLabelAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M80AttributedLabelAttachment.m; sourceTree = "<group>"; };
-		706281001C4CE2570086D2CF /* M80AttributedLabelDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M80AttributedLabelDefines.h; sourceTree = "<group>"; };
-		706281011C4CE2570086D2CF /* M80AttributedLabelURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M80AttributedLabelURL.h; sourceTree = "<group>"; };
-		706281021C4CE2570086D2CF /* M80AttributedLabelURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M80AttributedLabelURL.m; sourceTree = "<group>"; };
-		706281031C4CE2570086D2CF /* NSMutableAttributedString+M80.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+M80.h"; sourceTree = "<group>"; };
-		706281041C4CE2570086D2CF /* NSMutableAttributedString+M80.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+M80.m"; sourceTree = "<group>"; };
+		6CCAE76D1F29DADD004C9F43 /* buttonBKImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonBKImage@2x.png"; sourceTree = "<group>"; };
+		6CCAE76E1F29DADD004C9F43 /* Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Emoji.h; sourceTree = "<group>"; };
+		6CCAE76F1F29DADD004C9F43 /* Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Emoji.m; sourceTree = "<group>"; };
+		6CCAE7701F29DADD004C9F43 /* EmojiEmoticons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiEmoticons.h; sourceTree = "<group>"; };
+		6CCAE7711F29DADD004C9F43 /* EmojiEmoticons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiEmoticons.m; sourceTree = "<group>"; };
+		6CCAE7721F29DADD004C9F43 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
+		6CCAE7731F29DADD004C9F43 /* ExpressionCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressionCL.h; sourceTree = "<group>"; };
+		6CCAE7741F29DADD004C9F43 /* ExpressionCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressionCL.m; sourceTree = "<group>"; };
+		6CCAE7751F29DADD004C9F43 /* ExpressionKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressionKeyboardView.h; sourceTree = "<group>"; };
+		6CCAE7761F29DADD004C9F43 /* ExpressionKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressionKeyboardView.m; sourceTree = "<group>"; };
+		6CCAE7781F29DADD004C9F43 /* KZLinkLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZLinkLabel.h; sourceTree = "<group>"; };
+		6CCAE7791F29DADD004C9F43 /* KZLinkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZLinkLabel.m; sourceTree = "<group>"; };
+		6CCAE77A1F29DADD004C9F43 /* NSAttributedString+Emotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Emotion.h"; sourceTree = "<group>"; };
+		6CCAE77B1F29DADD004C9F43 /* NSAttributedString+Emotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Emotion.m"; sourceTree = "<group>"; };
 		70E4C4871C47811C00E4F6B4 /* ExpressionCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpressionCS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E4C48B1C47811C00E4F6B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		70E4C48D1C47811C00E4F6B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,18 +72,9 @@
 		70E4C4AE1C47811D00E4F6B4 /* ExpressionCSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpressionCSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E4C4B21C47811D00E4F6B4 /* ExpressionCSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpressionCSUITests.m; sourceTree = "<group>"; };
 		70E4C4B41C47811D00E4F6B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70E4C4C01C4781A100E4F6B4 /* ExpressionCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpressionCL.h; path = ../ExpressionCL.h; sourceTree = "<group>"; };
-		70E4C4C11C4781A100E4F6B4 /* ExpressionCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpressionCL.m; path = ../ExpressionCL.m; sourceTree = "<group>"; };
-		70E4C4C41C4781EA00E4F6B4 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
 		70E4C4C61C47884300E4F6B4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		70E4C4C71C47884300E4F6B4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		70E4C4C81C47884300E4F6B4 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		70E4C4CB1C478B0A00E4F6B4 /* Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Emoji.h; sourceTree = "<group>"; };
-		70E4C4CC1C478B0A00E4F6B4 /* Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Emoji.m; sourceTree = "<group>"; };
-		70E4C4CE1C4792F000E4F6B4 /* EmojiEmoticons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiEmoticons.h; sourceTree = "<group>"; };
-		70E4C4CF1C4792F000E4F6B4 /* EmojiEmoticons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiEmoticons.m; sourceTree = "<group>"; };
-		70E4C4D11C47996800E4F6B4 /* ExpressionKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpressionKeyboardView.h; path = ../ExpressionKeyboardView.h; sourceTree = "<group>"; };
-		70E4C4D21C47996800E4F6B4 /* ExpressionKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpressionKeyboardView.m; path = ../ExpressionKeyboardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,20 +102,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		706280FB1C4CE2570086D2CF /* M80AttributedLabel */ = {
+		6CCAE76C1F29DADD004C9F43 /* ExpressionKeyboardView */ = {
 			isa = PBXGroup;
 			children = (
-				706280FC1C4CE2570086D2CF /* M80AttributedLabel.h */,
-				706280FD1C4CE2570086D2CF /* M80AttributedLabel.m */,
-				706280FE1C4CE2570086D2CF /* M80AttributedLabelAttachment.h */,
-				706280FF1C4CE2570086D2CF /* M80AttributedLabelAttachment.m */,
-				706281001C4CE2570086D2CF /* M80AttributedLabelDefines.h */,
-				706281011C4CE2570086D2CF /* M80AttributedLabelURL.h */,
-				706281021C4CE2570086D2CF /* M80AttributedLabelURL.m */,
-				706281031C4CE2570086D2CF /* NSMutableAttributedString+M80.h */,
-				706281041C4CE2570086D2CF /* NSMutableAttributedString+M80.m */,
+				6CCAE76D1F29DADD004C9F43 /* buttonBKImage@2x.png */,
+				6CCAE76E1F29DADD004C9F43 /* Emoji.h */,
+				6CCAE76F1F29DADD004C9F43 /* Emoji.m */,
+				6CCAE7701F29DADD004C9F43 /* EmojiEmoticons.h */,
+				6CCAE7711F29DADD004C9F43 /* EmojiEmoticons.m */,
+				6CCAE7721F29DADD004C9F43 /* Emoticons.bundle */,
+				6CCAE7731F29DADD004C9F43 /* ExpressionCL.h */,
+				6CCAE7741F29DADD004C9F43 /* ExpressionCL.m */,
+				6CCAE7751F29DADD004C9F43 /* ExpressionKeyboardView.h */,
+				6CCAE7761F29DADD004C9F43 /* ExpressionKeyboardView.m */,
 			);
-			path = M80AttributedLabel;
+			path = ExpressionKeyboardView;
+			sourceTree = "<group>";
+		};
+		6CCAE7771F29DADD004C9F43 /* RickLabel */ = {
+			isa = PBXGroup;
+			children = (
+				6CCAE7781F29DADD004C9F43 /* KZLinkLabel.h */,
+				6CCAE7791F29DADD004C9F43 /* KZLinkLabel.m */,
+				6CCAE77A1F29DADD004C9F43 /* NSAttributedString+Emotion.h */,
+				6CCAE77B1F29DADD004C9F43 /* NSAttributedString+Emotion.m */,
+			);
+			path = RickLabel;
 			sourceTree = "<group>";
 		};
 		70E4C47E1C47811C00E4F6B4 = {
@@ -146,8 +153,8 @@
 		70E4C4891C47811C00E4F6B4 /* ExpressionCS */ = {
 			isa = PBXGroup;
 			children = (
-				706280FB1C4CE2570086D2CF /* M80AttributedLabel */,
-				70E4C4C31C4781EA00E4F6B4 /* Emoticons */,
+				6CCAE76C1F29DADD004C9F43 /* ExpressionKeyboardView */,
+				6CCAE7771F29DADD004C9F43 /* RickLabel */,
 				70E4C48D1C47811C00E4F6B4 /* AppDelegate.h */,
 				70E4C48E1C47811C00E4F6B4 /* AppDelegate.m */,
 				70E4C4961C47811C00E4F6B4 /* Main.storyboard */,
@@ -186,22 +193,6 @@
 				70E4C4B41C47811D00E4F6B4 /* Info.plist */,
 			);
 			path = ExpressionCSUITests;
-			sourceTree = "<group>";
-		};
-		70E4C4C31C4781EA00E4F6B4 /* Emoticons */ = {
-			isa = PBXGroup;
-			children = (
-				70E4C4C41C4781EA00E4F6B4 /* Emoticons.bundle */,
-				70E4C4CE1C4792F000E4F6B4 /* EmojiEmoticons.h */,
-				70E4C4CF1C4792F000E4F6B4 /* EmojiEmoticons.m */,
-				70E4C4CB1C478B0A00E4F6B4 /* Emoji.h */,
-				70E4C4CC1C478B0A00E4F6B4 /* Emoji.m */,
-				70E4C4C01C4781A100E4F6B4 /* ExpressionCL.h */,
-				70E4C4C11C4781A100E4F6B4 /* ExpressionCL.m */,
-				70E4C4D11C47996800E4F6B4 /* ExpressionKeyboardView.h */,
-				70E4C4D21C47996800E4F6B4 /* ExpressionKeyboardView.m */,
-			);
-			path = Emoticons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,8 +299,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				70E4C4CA1C47884300E4F6B4 /* ViewController.xib in Resources */,
+				6CCAE77F1F29DADD004C9F43 /* Emoticons.bundle in Resources */,
 				70E4C49D1C47811C00E4F6B4 /* LaunchScreen.storyboard in Resources */,
-				70E4C4C51C4781EA00E4F6B4 /* Emoticons.bundle in Resources */,
+				6CCAE77C1F29DADD004C9F43 /* buttonBKImage@2x.png in Resources */,
 				70E4C49A1C47811C00E4F6B4 /* Assets.xcassets in Resources */,
 				70E4C4981C47811C00E4F6B4 /* Main.storyboard in Resources */,
 			);
@@ -336,17 +328,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70E4C4D01C4792F100E4F6B4 /* EmojiEmoticons.m in Sources */,
-				70E4C4C21C4781A100E4F6B4 /* ExpressionCL.m in Sources */,
-				70E4C4CD1C478B0A00E4F6B4 /* Emoji.m in Sources */,
+				6CCAE7831F29DADD004C9F43 /* NSAttributedString+Emotion.m in Sources */,
+				6CCAE7801F29DADD004C9F43 /* ExpressionCL.m in Sources */,
 				70E4C48F1C47811C00E4F6B4 /* AppDelegate.m in Sources */,
-				706281061C4CE2570086D2CF /* M80AttributedLabelAttachment.m in Sources */,
-				706281051C4CE2570086D2CF /* M80AttributedLabel.m in Sources */,
-				706281081C4CE2570086D2CF /* NSMutableAttributedString+M80.m in Sources */,
-				70E4C4D31C47996800E4F6B4 /* ExpressionKeyboardView.m in Sources */,
 				70E4C4C91C47884300E4F6B4 /* ViewController.m in Sources */,
-				706281071C4CE2570086D2CF /* M80AttributedLabelURL.m in Sources */,
+				6CCAE7821F29DADD004C9F43 /* KZLinkLabel.m in Sources */,
+				6CCAE77D1F29DADD004C9F43 /* Emoji.m in Sources */,
+				6CCAE7811F29DADD004C9F43 /* ExpressionKeyboardView.m in Sources */,
 				70E4C48C1C47811C00E4F6B4 /* main.m in Sources */,
+				6CCAE77E1F29DADD004C9F43 /* EmojiEmoticons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

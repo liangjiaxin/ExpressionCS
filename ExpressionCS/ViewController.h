@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RickLabel/KZLinkLabel.h"
 
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *contentField;
-@property (weak, nonatomic) IBOutlet UITextView *contentTextView;
+
+@property (weak, nonatomic) IBOutlet KZLinkLabel *contentLabel;
+
 
 @end

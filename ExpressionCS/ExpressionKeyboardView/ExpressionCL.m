@@ -7,7 +7,7 @@
 //
 
 #import "ExpressionCL.h"
-#import "Emoticons/Emoji.h"
+#import "Emoji.h"
 
 @implementation ExpressionCL
 

@@ -11,9 +11,14 @@
 //声明协议中的接口函数
 @protocol  ExpressionKeyboardDelegate <NSObject>
 
-- (void)ExpressionSelect:(NSString *)str;
+/**选择*/
+- (void)expressionSelect:(NSString *)str;
 
-- (void)ExpressionDelete;
+/**删除*/
+- (void)expressionDelete;
+
+/**发送*/
+- (void)expressionSend;
 
 @end
 
